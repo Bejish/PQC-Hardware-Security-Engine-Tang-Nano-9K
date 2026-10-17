@@ -1,0 +1,65 @@
+# Tang Nano 9K Constraint File for PQC Firewall System
+# GW1NR-LV9QN88PC6/I5
+
+# System Clock - 27MHz crystal oscillator
+IO_LOC "clk" 52;
+IO_PORT "clk" IO_TYPE=LVCMOS33 PULL_MODE=NONE;
+
+# Reset button (active low)
+IO_LOC "rst_n" 3;
+IO_PORT "rst_n" IO_TYPE=LVCMOS18 PULL_MODE=UP;
+
+# Data input pins (using available GPIO pins)
+IO_LOC "data_in[0]" 69;
+IO_LOC "data_in[1]" 70;
+IO_LOC "data_in[2]" 71;
+IO_LOC "data_in[3]" 72;
+IO_LOC "data_in[4]" 73;
+IO_LOC "data_in[5]" 74;
+IO_LOC "data_in[6]" 75;
+IO_LOC "data_in[7]" 76;
+
+IO_PORT "data_in[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[4]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[5]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[6]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "data_in[7]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+# Data valid signal
+IO_LOC "data_valid" 77;
+IO_PORT "data_valid" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+# Hardware test control pins (using available GPIO pins)
+IO_LOC "test_enable" 25;
+IO_LOC "test_mode[0]" 28;
+IO_LOC "test_mode[1]" 29;
+
+IO_PORT "test_enable" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "test_mode[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "test_mode[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+# Built-in LEDs (Tang Nano 9K has 6 built-in LEDs)
+IO_LOC "led[0]" 10;  # LED0
+IO_LOC "led[1]" 11;  # LED1
+IO_LOC "led[2]" 13;  # LED2
+IO_LOC "led[3]" 14;  # LED3
+IO_LOC "led[4]" 15;  # LED4
+IO_LOC "led[5]" 16;  # LED5
+
+IO_PORT "led[0]" IO_TYPE=LVCMOS18 DRIVE=8 SLEW_RATE=SLOW;
+IO_PORT "led[1]" IO_TYPE=LVCMOS18 DRIVE=8 SLEW_RATE=SLOW;
+IO_PORT "led[2]" IO_TYPE=LVCMOS18 DRIVE=8 SLEW_RATE=SLOW;
+IO_PORT "led[3]" IO_TYPE=LVCMOS18 DRIVE=8 SLEW_RATE=SLOW;
+IO_PORT "led[4]" IO_TYPE=LVCMOS18 DRIVE=8 SLEW_RATE=SLOW;
+IO_PORT "led[5]" IO_TYPE=LVCMOS18 DRIVE=8 SLEW_RATE=SLOW;
+
+# Output status signals (optional - for debugging)
+IO_LOC "threat_detected" 26;
+IO_LOC "system_ready" 27;
+
+IO_PORT "threat_detected" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_PORT "system_ready" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+
