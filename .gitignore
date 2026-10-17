@@ -1,0 +1,41 @@
+# Gowin / Tang Nano related
+*.fs
+*.bit
+*.bin
+*.cfg
+*.log
+*.jou
+*.str
+*.rpt
+*.txt
+*.html
+*.csv
+*.dcp
+*.pb
+*.wdb
+*.wcfg
+
+# Simulation
+*.vcd
+*.fsdb
+*.wlf
+*.trn
+*.out
+*.saif
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# General
+*.zip
+*.tar
+*.gz
+*.rar
+__pycache__/
+*.pyc
