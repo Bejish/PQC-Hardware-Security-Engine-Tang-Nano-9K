@@ -35,8 +35,6 @@ The Tang Nano 9K is a compact, low-power FPGA development board from Sipeed, pow
 
 ![LUT Resources](images/lut.jpeg)
 
-The board was chosen because of its low power consumption, sufficient logic resources for lightweight cryptographic engines, and built-in USB-UART for easy communication testing.
-
 ---
 
 ## 2. Project Overview
@@ -64,7 +62,22 @@ This combination provides real-time, low-power, quantum-resistant protection.
 
 ---
 
-## 3. Implementation Results
+## 3. RTL Design
+
+| File                        | Description                              |
+|-----------------------------|------------------------------------------|
+| `pqc_firewall_top.v`        | Top-level module                         |
+| `kyber_512_verifier.v`      | Kyber-inspired mathematical verification |
+| `pattern_matcher.v`         | Malicious pattern detection              |
+| `threat_analyzer.v`         | Threat decision logic                    |
+| `data_input_controller.v`   | Data input handling                      |
+| `led_controller.v`          | LED indication control                   |
+| `tb_pqc_firewall.v`         | Testbench                                |
+| `pqc_firewall.cst`          | Pin constraints                          |
+
+---
+
+## 4. Implementation Results
 
 ### Resource Utilization
 
@@ -88,7 +101,7 @@ This combination provides real-time, low-power, quantum-resistant protection.
 
 ---
 
-## 4. Key Benefits
+## 5. Key Benefits
 
 - Real-time dual-layer threat detection
 - Extremely low resource and power usage
@@ -98,14 +111,14 @@ This combination provides real-time, low-power, quantum-resistant protection.
 
 ---
 
-## 5. Future Scope
+## 6. Future Scope
 
-The current design can be extended to enable **secure communication between multiple ECUs** (Electronic Control Units):
+The current design can be extended to enable **secure communication between multiple ECUs**:
 
 - Use this PQC engine as a hardware security module on each ECU
 - Establish quantum-resistant secure channels over UART / CAN / SPI
 - Support multi-node secure networks for automotive, industrial, and rail applications
-- Add key exchange + encrypted data path using full Kyber KEM
+- Add full key exchange + encrypted data path using Kyber KEM
 
 ---
 
@@ -113,7 +126,7 @@ The current design can be extended to enable **secure communication between mult
 
 - **FPGA Board**: Sipeed Tang Nano 9K (Gowin GW1NR-9)
 - **HDL**: Verilog
-- **IDE**: Gowin FPGA Designer / GOWIN EDA
+- **IDE**: GOWIN FPGA Designer / GOWIN EDA
 - **Cryptography**: CRYSTALS-Kyber inspired lattice-based design
 
 ---
